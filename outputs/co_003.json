@@ -1,0 +1,66 @@
+{
+  "source_file": "co_003.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "031",
+      "confidence": 0.95,
+      "evidence": "CHANGE ORDER NUMBER: 031",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Harbor Street Lofts",
+      "confidence": 0.92,
+      "evidence": "Project: Harbor Street Lofts",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Delta Plumbing Co.",
+      "confidence": 0.9,
+      "evidence": "Contractor: Delta Plumbing Co.",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-06-09",
+      "confidence": 0.92,
+      "evidence": "Date: June 9, 2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Credit for deletion of two floor drains in the level 1 corridor (owner decided to remove them from the scope).",
+      "confidence": 0.85,
+      "evidence": "Credit for deletion of two floor drains in the level 1 corridor (owner decided to remove them from the scope).",
+      "method": "rule"
+    },
+    "amount": {
+      "value": -3200.0,
+      "confidence": 0.88,
+      "evidence": "Credit Amount: ($3,200.00)",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Approved by Owner and Architect.",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [
+    "Amount interpreted as a credit (negative).",
+    "Schedule impact not found."
+  ],
+  "overall_confidence": 0.79,
+  "needs_review": false,
+  "text_length": 290
+}

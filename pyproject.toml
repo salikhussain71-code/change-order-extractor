@@ -1,0 +1,14 @@
+[project]
+name = "change-order-extractor"
+version = "1.0.0"
+description = "Extract structured, validated JSON with confidence scores from messy construction change orders (text and PDF)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["pdfplumber>=0.11", "pydantic>=2.5"]
+
+[project.scripts]
+change-order-extractor = "change_order_extractor.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

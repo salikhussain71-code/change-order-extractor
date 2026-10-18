@@ -1,0 +1,63 @@
+{
+  "source_file": "co_008.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "0045",
+      "confidence": 0.95,
+      "evidence": "Change Order No: 0045",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Sunrise Apartments Phase 2",
+      "confidence": 0.92,
+      "evidence": "Project: Sunrise Apartments Phase 2",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Keystone Roofing",
+      "confidence": 0.9,
+      "evidence": "Contractor: Keystone Roofing",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-07-14",
+      "confidence": 0.92,
+      "evidence": "Date: 14/07/2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Replace damaged roof decking found after tear-off, approximately 480 sq ft.",
+      "confidence": 0.85,
+      "evidence": "Replace damaged roof decking found after tear-off, approximately 480 sq ft.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 6240.0,
+      "confidence": 0.88,
+      "evidence": "Amount: $6,240.00",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 4,
+      "confidence": 0.88,
+      "evidence": "Schedule: +4 days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Status: Approved",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [],
+  "overall_confidence": 0.89,
+  "needs_review": false,
+  "text_length": 248
+}

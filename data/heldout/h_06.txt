@@ -1,0 +1,12 @@
+Change Order No. 301
+Project: Union Station Renovation
+Date: January 19, 2026
+Contractor: Cobalt Electric
+
+Description: Install temporary lighting for night work.
+
+Original Contract Sum: $2,450,000.00
+Total Change Order Amount: $9,875.00
+Revised Contract Sum: $2,459,875.00
+Schedule Impact: None
+Status: Approved

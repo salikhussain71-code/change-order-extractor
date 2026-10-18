@@ -1,0 +1,65 @@
+{
+  "source_file": "co_013_scanned.pdf",
+  "fields": {
+    "change_order_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "project_name": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "contractor": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "description": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "amount": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "currency": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "schedule_impact_days": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "approval_status": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    }
+  },
+  "warnings": [
+    "PDF has no text layer (probably scanned). OCR is required; not supported yet."
+  ],
+  "overall_confidence": 0.0,
+  "needs_review": true,
+  "text_length": 0
+}

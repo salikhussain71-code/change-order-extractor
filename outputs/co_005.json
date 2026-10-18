@@ -1,0 +1,66 @@
+{
+  "source_file": "co_005.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "112",
+      "confidence": 0.9,
+      "evidence": "CHANGE ORDER 112",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Lakeview Office Tower",
+      "confidence": 0.92,
+      "evidence": "Project: Lakeview Office Tower",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Summit Concrete Ltd.",
+      "confidence": 0.9,
+      "evidence": "Contractor: Summit Concrete Ltd.",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-04-05",
+      "confidence": 0.45,
+      "evidence": "Date: 04/05/2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Additional rebar at podium slab per structural revision S-14.",
+      "confidence": 0.85,
+      "evidence": "Additional rebar at podium slab per structural revision S-14.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 27300.0,
+      "confidence": 0.95,
+      "evidence": "Total Change Order Amount: $27,300.00",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 0,
+      "confidence": 0.85,
+      "evidence": "Schedule Impact: No",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Status: Approved",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [
+    "Ambiguous date '04/05/2025' (day/month order unclear); assumed month-first as 2025-04-05.",
+    "Flagged for human review."
+  ],
+  "overall_confidence": 0.85,
+  "needs_review": true,
+  "text_length": 379
+}

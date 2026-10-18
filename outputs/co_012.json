@@ -1,0 +1,65 @@
+{
+  "source_file": "co_012.pdf",
+  "fields": {
+    "change_order_number": {
+      "value": "CO-3",
+      "confidence": 0.95,
+      "evidence": "CHANGE ORDER #CO-3",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Elm Street Duplex",
+      "confidence": 0.92,
+      "evidence": "Project Name: Elm Street Duplex",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Bluebird Painting",
+      "confidence": 0.9,
+      "evidence": "Contractor: Bluebird Painting",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2026-02-20",
+      "confidence": 0.92,
+      "evidence": "Date: 02/20/2026",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Deduct interior paint at unit B; owner will paint.",
+      "confidence": 0.85,
+      "evidence": "Deduct interior paint at unit B; owner will paint.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": -2150.0,
+      "confidence": 0.88,
+      "evidence": "Credit: ($2,150.00)",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 0,
+      "confidence": 0.85,
+      "evidence": "Schedule Impact: None",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "pending",
+      "confidence": 0.85,
+      "evidence": "Pending owner approval",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [
+    "Amount interpreted as a credit (negative)."
+  ],
+  "overall_confidence": 0.89,
+  "needs_review": false,
+  "text_length": 226
+}

@@ -1,0 +1,63 @@
+{
+  "source_file": "co_002.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "CO-22",
+      "confidence": 0.95,
+      "evidence": "Change Order #CO-22",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Greenfield Elementary School",
+      "confidence": 0.92,
+      "evidence": "Project Name: Greenfield Elementary School",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Brightline Electric Inc.",
+      "confidence": 0.9,
+      "evidence": "Contractor: Brightline Electric Inc.",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-03-15",
+      "confidence": 0.92,
+      "evidence": "Date: 03/15/2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Replace six fluorescent fixtures in gym with LED high-bay units as requested by facilities manager.",
+      "confidence": 0.85,
+      "evidence": "Replace six fluorescent fixtures in gym with LED high-bay units as requested by facilities manager.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 8900.0,
+      "confidence": 0.88,
+      "evidence": "Amount: $8,900",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 3,
+      "confidence": 0.88,
+      "evidence": "Time Extension: 3 working days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "pending",
+      "confidence": 0.85,
+      "evidence": "Status: Pending owner signature",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [],
+  "overall_confidence": 0.89,
+  "needs_review": false,
+  "text_length": 312
+}

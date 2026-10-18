@@ -1,0 +1,63 @@
+{
+  "source_file": "h_04.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "66",
+      "confidence": 0.95,
+      "evidence": "CHANGE ORDER # 66",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Delta Logistics Warehouse",
+      "confidence": 0.92,
+      "evidence": "Project: Delta Logistics Warehouse",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Granite Excavating",
+      "confidence": 0.9,
+      "evidence": "Contractor: Granite Excavating",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2026-04-02",
+      "confidence": 0.92,
+      "evidence": "Date: April 2, 2026",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Remove unsuitable soil at grid C-4 and replace with structural fill.",
+      "confidence": 0.85,
+      "evidence": "Remove unsuitable soil at grid C-4 and replace with structural fill.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 41300.0,
+      "confidence": 0.88,
+      "evidence": "Amount of this change: $41,300.00",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 12,
+      "confidence": 0.88,
+      "evidence": "contract time: 12 calendar days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "rejected",
+      "confidence": 0.88,
+      "evidence": "Denied by owner on April 10.",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [],
+  "overall_confidence": 0.9,
+  "needs_review": false,
+  "text_length": 293
+}

@@ -1,0 +1,65 @@
+{
+  "source_file": "co_004.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "7",
+      "confidence": 0.8,
+      "evidence": "chnage order no 7",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Oakwood Townhomes",
+      "confidence": 0.78,
+      "evidence": "prject: Oakwood Townhomes",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "date": {
+      "value": "2026-01-05",
+      "confidence": 0.92,
+      "evidence": "Date : Jan 5 2026",
+      "method": "rule"
+    },
+    "description": {
+      "value": "add extra framing at rear deck , per RFI 12",
+      "confidence": 0.75,
+      "evidence": "add extra framing at rear deck , per RFI 12",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 4075.5,
+      "confidence": 0.95,
+      "evidence": "Total: $4,075.50",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 2,
+      "confidence": 0.88,
+      "evidence": "schedule impact: 2 days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "pending",
+      "confidence": 0.85,
+      "evidence": "Pending approval",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [
+    "Contractor not found."
+  ],
+  "overall_confidence": 0.82,
+  "needs_review": false,
+  "text_length": 198
+}

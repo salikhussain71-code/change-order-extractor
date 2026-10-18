@@ -1,0 +1,66 @@
+{
+  "source_file": "h_05.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "5",
+      "confidence": 0.9,
+      "evidence": "CHANGE ORDER 5",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Willow Creek Pool House",
+      "confidence": 0.92,
+      "evidence": "Project: Willow Creek Pool House",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Seaside Carpentry",
+      "confidence": 0.9,
+      "evidence": "Contractor: Seaside Carpentry",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-07-08",
+      "confidence": 0.45,
+      "evidence": "Date: 07/08/2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Upgrade window package to impact-rated units.",
+      "confidence": 0.85,
+      "evidence": "Upgrade window package to impact-rated units.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 18400.0,
+      "confidence": 0.95,
+      "evidence": "Total Amount: $18,400.00",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 14,
+      "confidence": 0.88,
+      "evidence": "Schedule Impact: 14 days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Approved",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [
+    "Ambiguous date '07/08/2025' (day/month order unclear); assumed month-first as 2025-07-08.",
+    "Flagged for human review."
+  ],
+  "overall_confidence": 0.86,
+  "needs_review": true,
+  "text_length": 213
+}

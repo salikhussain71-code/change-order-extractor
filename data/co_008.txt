@@ -1,0 +1,11 @@
+Change Order No: 0045
+Project: Sunrise Apartments Phase 2
+Date: 14/07/2025
+Contractor: Keystone Roofing
+
+Description: Replace damaged roof decking found after tear-off, approximately
+480 sq ft.
+
+Amount: $6,240.00
+Schedule: +4 days
+Status: Approved

@@ -1,0 +1,8 @@
+CHANGE ORDER No. 19
+Project: Marina Bay Parking Structure
+Date: 12/31/2025
+Contractor: Tidewater Concrete
+Description: Credit for eliminating the planned stamped finish on ramp 2.
+Deduct: $(7,500.00)
+Schedule: 0 days
+Approved

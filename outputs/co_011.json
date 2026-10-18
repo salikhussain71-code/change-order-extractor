@@ -1,0 +1,63 @@
+{
+  "source_file": "co_011.pdf",
+  "fields": {
+    "change_order_number": {
+      "value": "058",
+      "confidence": 0.95,
+      "evidence": "CHANGE ORDER NO. 058",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Westgate Community Center",
+      "confidence": 0.92,
+      "evidence": "Project: Westgate Community Center",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Ironwood Structural Inc.",
+      "confidence": 0.9,
+      "evidence": "Contractor: Ironwood Structural Inc.",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-11-12",
+      "confidence": 0.92,
+      "evidence": "Date: November 12, 2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Add steel beam at gym roof opening per RFI-087.",
+      "confidence": 0.85,
+      "evidence": "Add steel beam at gym roof opening per RFI-087.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 31640.0,
+      "confidence": 0.95,
+      "evidence": "Total Amount: $31,640.00",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 7,
+      "confidence": 0.88,
+      "evidence": "Schedule Impact: 7 calendar days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Status: Approved",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [],
+  "overall_confidence": 0.91,
+  "needs_review": false,
+  "text_length": 252
+}

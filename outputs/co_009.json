@@ -1,0 +1,71 @@
+{
+  "source_file": "co_009.txt",
+  "fields": {
+    "change_order_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "project_name": {
+      "value": "Cedar Hills Library",
+      "confidence": 0.92,
+      "evidence": "Project: Cedar Hills Library",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Meridian Glass",
+      "confidence": 0.9,
+      "evidence": "Contractor: Meridian Glass",
+      "method": "rule"
+    },
+    "date": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "description": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "amount": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "schedule_impact_days": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "approval_status": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "currency": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    }
+  },
+  "warnings": [
+    "Change order number not found.",
+    "Date not found.",
+    "Description not found.",
+    "Amount not found.",
+    "Schedule impact not found.",
+    "Approval status not found.",
+    "Flagged for human review."
+  ],
+  "overall_confidence": 0.14,
+  "needs_review": true,
+  "text_length": 123
+}

@@ -1,0 +1,63 @@
+{
+  "source_file": "h_03.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "A-017",
+      "confidence": 0.95,
+      "evidence": "Change Order Number: A-017",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Ashford Elementary Addition",
+      "confidence": 0.92,
+      "evidence": "Project: Ashford Elementary Addition",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Prime Mechanical Group",
+      "confidence": 0.9,
+      "evidence": "Contractor: Prime Mechanical Group",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-05-30",
+      "confidence": 0.92,
+      "evidence": "Date: 2025-05-30",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Furnish and install two additional VAV boxes in room 112 due to revised layout. Includes controls.",
+      "confidence": 0.85,
+      "evidence": "Furnish and install two additional VAV boxes in room 112 due to revised layout. Includes controls.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 22015.75,
+      "confidence": 0.95,
+      "evidence": "Total: USD 22,015.75",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 3,
+      "confidence": 0.88,
+      "evidence": "Schedule Impact: 3 working days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "pending",
+      "confidence": 0.85,
+      "evidence": "Awaiting owner approval.",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [],
+  "overall_confidence": 0.91,
+  "needs_review": false,
+  "text_length": 306
+}

@@ -1,0 +1,8 @@
+CHANGE ORDER 5
+Project: Willow Creek Pool House
+Date: 07/08/2025
+Contractor: Seaside Carpentry
+Description: Upgrade window package to impact-rated units.
+Total Amount: $18,400.00
+Schedule Impact: 14 days
+Approved

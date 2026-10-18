@@ -1,0 +1,66 @@
+{
+  "source_file": "co_006.txt",
+  "fields": {
+    "change_order_number": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "project_name": {
+      "value": "Pine Ridge Clinic",
+      "confidence": 0.92,
+      "evidence": "Project: Pine Ridge Clinic",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Northstar HVAC",
+      "confidence": 0.9,
+      "evidence": "Contractor: Northstar HVAC",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-08-21",
+      "confidence": 0.92,
+      "evidence": "Date: 2025-08-21",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Relocate rooftop unit RTU-2 four feet east to clear the new parapet detail.",
+      "confidence": 0.85,
+      "evidence": "Relocate rooftop unit RTU-2 four feet east to clear the new parapet detail.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 19800.0,
+      "confidence": 0.88,
+      "evidence": "Cost: $19,800",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 10,
+      "confidence": 0.88,
+      "evidence": "Delay: 10 calendar days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "rejected",
+      "confidence": 0.88,
+      "evidence": "Status: Rejected by Owner",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [
+    "Change order number not found.",
+    "Flagged for human review."
+  ],
+  "overall_confidence": 0.75,
+  "needs_review": true,
+  "text_length": 274
+}

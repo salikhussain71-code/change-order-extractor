@@ -1,0 +1,63 @@
+{
+  "source_file": "h_06.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "301",
+      "confidence": 0.95,
+      "evidence": "Change Order No. 301",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Union Station Renovation",
+      "confidence": 0.92,
+      "evidence": "Project: Union Station Renovation",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Cobalt Electric",
+      "confidence": 0.9,
+      "evidence": "Contractor: Cobalt Electric",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2026-01-19",
+      "confidence": 0.92,
+      "evidence": "Date: January 19, 2026",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Install temporary lighting for night work.",
+      "confidence": 0.85,
+      "evidence": "Install temporary lighting for night work.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 9875.0,
+      "confidence": 0.95,
+      "evidence": "Total Change Order Amount: $9,875.00",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 0,
+      "confidence": 0.85,
+      "evidence": "Schedule Impact: None",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Status: Approved",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [],
+  "overall_confidence": 0.91,
+  "needs_review": false,
+  "text_length": 313
+}

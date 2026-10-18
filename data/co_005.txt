@@ -1,0 +1,13 @@
+CHANGE ORDER 112
+Project: Lakeview Office Tower
+Date: 04/05/2025
+Contractor: Summit Concrete Ltd.
+
+Description: Additional rebar at podium slab per structural revision S-14.
+
+Original Contract Sum: $1,200,000.00
+Previous Change Orders: $85,000.00
+Total Change Order Amount: $27,300.00
+New Contract Sum: $1,312,300.00
+Schedule Impact: No change to contract time.
+Status: Approved

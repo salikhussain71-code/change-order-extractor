@@ -1,0 +1,10 @@
+CHANGE ORDER # 66
+Project: Delta Logistics Warehouse
+Date: April 2, 2026
+Contractor: Granite Excavating
+
+Description: Remove unsuitable soil at grid C-4 and replace with structural fill.
+
+Amount of this change: $41,300.00
+Change to contract time: 12 calendar days
+Denied by owner on April 10.

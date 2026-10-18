@@ -1,0 +1,8 @@
+{
+ "h_01.txt": {"change_order_number": "203", "project_name": "Hillcrest Senior Living", "contractor": "Redwood Drywall & Paint", "date": "2025-09-04", "amount": 14820.0, "currency": "USD", "schedule_impact_days": 6, "approval_status": "approved"},
+ "h_02.txt": {"change_order_number": "19", "project_name": "Marina Bay Parking Structure", "contractor": "Tidewater Concrete", "date": "2025-12-31", "amount": -7500.0, "currency": "USD", "schedule_impact_days": 0, "approval_status": "approved"},
+ "h_03.txt": {"change_order_number": "A-017", "project_name": "Ashford Elementary Addition", "contractor": "Prime Mechanical Group", "date": "2025-05-30", "amount": 22015.75, "currency": "USD", "schedule_impact_days": 3, "approval_status": "pending"},
+ "h_04.txt": {"change_order_number": "66", "project_name": "Delta Logistics Warehouse", "contractor": "Granite Excavating", "date": "2026-04-02", "amount": 41300.0, "currency": "USD", "schedule_impact_days": 12, "approval_status": "rejected"},
+ "h_05.txt": {"change_order_number": "5", "project_name": "Willow Creek Pool House", "contractor": "Seaside Carpentry", "date": "2025-07-08", "amount": 18400.0, "currency": "USD", "schedule_impact_days": 14, "approval_status": "approved"},
+ "h_06.txt": {"change_order_number": "301", "project_name": "Union Station Renovation", "contractor": "Cobalt Electric", "date": "2026-01-19", "amount": 9875.0, "currency": "USD", "schedule_impact_days": 0, "approval_status": "approved"}
+}

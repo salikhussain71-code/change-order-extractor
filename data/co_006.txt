@@ -1,0 +1,12 @@
+CHANGE ORDER REQUEST
+Project: Pine Ridge Clinic
+Contractor: Northstar HVAC
+Date: 2025-08-21
+
+Description: Relocate rooftop unit RTU-2 four feet east to clear
+the new parapet detail.
+
+Cost: $19,800
+Delay: 10 calendar days
+Payment terms: Net 30 days
+Status: Rejected by Owner

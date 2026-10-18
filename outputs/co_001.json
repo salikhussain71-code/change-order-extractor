@@ -1,0 +1,63 @@
+{
+  "source_file": "co_001.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "014",
+      "confidence": 0.95,
+      "evidence": "CHANGE ORDER NO. 014",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Riverside Medical Plaza",
+      "confidence": 0.92,
+      "evidence": "Project: Riverside Medical Plaza",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Apex Mechanical LLC",
+      "confidence": 0.9,
+      "evidence": "Contractor: Apex Mechanical LLC",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-03-03",
+      "confidence": 0.92,
+      "evidence": "Date: March 3, 2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Add two additional supply ducts on level 3 per architect revision RFI-221. Includes labor and materials.",
+      "confidence": 0.85,
+      "evidence": "Add two additional supply ducts on level 3 per architect revision RFI-221. Includes labor and materials.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 12450.0,
+      "confidence": 0.95,
+      "evidence": "Total Amount: $12,450.00",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 5,
+      "confidence": 0.88,
+      "evidence": "Schedule Impact: 5 calendar days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Status: Approved by Owner",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [],
+  "overall_confidence": 0.91,
+  "needs_review": false,
+  "text_length": 310
+}

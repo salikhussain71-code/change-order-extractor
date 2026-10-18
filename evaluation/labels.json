@@ -1,0 +1,13 @@
+{
+  "co_001.txt": {"change_order_number": "014", "project_name": "Riverside Medical Plaza", "contractor": "Apex Mechanical LLC", "date": "2025-03-03", "amount": 12450.0, "currency": "USD", "schedule_impact_days": 5, "approval_status": "approved"},
+  "co_002.txt": {"change_order_number": "CO-22", "project_name": "Greenfield Elementary School", "contractor": "Brightline Electric Inc.", "date": "2025-03-15", "amount": 8900.0, "currency": "USD", "schedule_impact_days": 3, "approval_status": "pending"},
+  "co_003.txt": {"change_order_number": "031", "project_name": "Harbor Street Lofts", "contractor": "Delta Plumbing Co.", "date": "2025-06-09", "amount": -3200.0, "currency": "USD", "schedule_impact_days": null, "approval_status": "approved"},
+  "co_004.txt": {"change_order_number": "7", "project_name": "Oakwood Townhomes", "contractor": null, "date": "2026-01-05", "amount": 4075.5, "currency": "USD", "schedule_impact_days": 2, "approval_status": "pending"},
+  "co_005.txt": {"change_order_number": "112", "project_name": "Lakeview Office Tower", "contractor": "Summit Concrete Ltd.", "date": "2025-04-05", "amount": 27300.0, "currency": "USD", "schedule_impact_days": 0, "approval_status": "approved"},
+  "co_006.txt": {"change_order_number": null, "project_name": "Pine Ridge Clinic", "contractor": "Northstar HVAC", "date": "2025-08-21", "amount": 19800.0, "currency": "USD", "schedule_impact_days": 10, "approval_status": "rejected"},
+  "co_007.txt": {"change_order_number": "009", "project_name": "Maple Office Renovation", "contractor": "Clearwater Builders", "date": "2026-10-10", "amount": 1250.0, "currency": "USD", "schedule_impact_days": 3, "approval_status": "approved"},
+  "co_008.txt": {"change_order_number": "0045", "project_name": "Sunrise Apartments Phase 2", "contractor": "Keystone Roofing", "date": "2025-07-14", "amount": 6240.0, "currency": "USD", "schedule_impact_days": 4, "approval_status": "approved"},
+  "co_009.txt": {"change_order_number": null, "project_name": "Cedar Hills Library", "contractor": "Meridian Glass", "date": null, "amount": null, "currency": null, "schedule_impact_days": null, "approval_status": null},
+  "co_011.pdf": {"change_order_number": "058", "project_name": "Westgate Community Center", "contractor": "Ironwood Structural Inc.", "date": "2025-11-12", "amount": 31640.0, "currency": "USD", "schedule_impact_days": 7, "approval_status": "approved"},
+  "co_012.pdf": {"change_order_number": "CO-3", "project_name": "Elm Street Duplex", "contractor": "Bluebird Painting", "date": "2026-02-20", "amount": -2150.0, "currency": "USD", "schedule_impact_days": 0, "approval_status": "pending"}
+}

@@ -1,0 +1,4 @@
+pytest>=8.0
+reportlab>=4.0
+pillow>=10.0
+-r requirements.txt

@@ -1,0 +1,65 @@
+{
+  "source_file": "h_02.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "19",
+      "confidence": 0.95,
+      "evidence": "CHANGE ORDER No. 19",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": "Marina Bay Parking Structure",
+      "confidence": 0.92,
+      "evidence": "Project: Marina Bay Parking Structure",
+      "method": "rule"
+    },
+    "contractor": {
+      "value": "Tidewater Concrete",
+      "confidence": 0.9,
+      "evidence": "Contractor: Tidewater Concrete",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-12-31",
+      "confidence": 0.92,
+      "evidence": "Date: 12/31/2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Credit for eliminating the planned stamped finish on ramp 2.",
+      "confidence": 0.85,
+      "evidence": "Credit for eliminating the planned stamped finish on ramp 2.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": -7500.0,
+      "confidence": 0.88,
+      "evidence": "Deduct: $(7,500.00)",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 0,
+      "confidence": 0.88,
+      "evidence": "Schedule: 0 days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Approved",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [
+    "Amount interpreted as a credit (negative)."
+  ],
+  "overall_confidence": 0.89,
+  "needs_review": false,
+  "text_length": 226
+}

@@ -1,0 +1,65 @@
+{
+  "source_file": "h_01.txt",
+  "fields": {
+    "change_order_number": {
+      "value": "203",
+      "confidence": 0.72,
+      "evidence": "CCO 203",
+      "method": "rule"
+    },
+    "project_name": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    },
+    "contractor": {
+      "value": "Redwood Drywall & Paint",
+      "confidence": 0.9,
+      "evidence": "Submitted by: Redwood Drywall & Paint",
+      "method": "rule"
+    },
+    "date": {
+      "value": "2025-09-04",
+      "confidence": 0.92,
+      "evidence": "Issued: Sept 4, 2025",
+      "method": "rule"
+    },
+    "description": {
+      "value": "Owner requested upgraded Level 5 finish on corridor walls.",
+      "confidence": 0.85,
+      "evidence": "Owner requested upgraded Level 5 finish on corridor walls.",
+      "method": "rule"
+    },
+    "amount": {
+      "value": 14820.0,
+      "confidence": 0.95,
+      "evidence": "Net Change: $14,820.00",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": 6,
+      "confidence": 0.88,
+      "evidence": "Time: add 6 days",
+      "method": "rule"
+    },
+    "approval_status": {
+      "value": "approved",
+      "confidence": 0.85,
+      "evidence": "Status: Executed",
+      "method": "rule"
+    },
+    "currency": {
+      "value": "USD",
+      "confidence": 0.9,
+      "evidence": "USD",
+      "method": "rule"
+    }
+  },
+  "warnings": [
+    "Project name not found."
+  ],
+  "overall_confidence": 0.79,
+  "needs_review": false,
+  "text_length": 229
+}
