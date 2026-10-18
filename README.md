@@ -9,7 +9,7 @@ Built for the Sledge AI Engineer assignment. All sample documents are synthetic.
 ## Quick start (Windows PowerShell)
 
 ```powershell
-git clone https://github.com/YOUR-USERNAME/change-order-extractor.git
+git clone https://github.com/salikhussain71-code/change-order-extractor.git
 cd change-order-extractor
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
