@@ -76,11 +76,7 @@ More outputs are in `outputs/` (the real results of running the tool on `data/`)
 They encode *evidence strength* (explicit label ~0.9, typo-tolerant ~0.8, unlabelled `$` ~0.5), reduced when validation
 finds problems. They are not calibrated. `evaluate` prints mean confidence for correct vs wrong answers as a sanity check.
 
-### LLM fallback safety
-- The document is treated as **untrusted data** (prompt-injection safe prompt + a detector that flags such text).
-- The model must return an **exact quote**; if the quote is not in the document the answer is **rejected** (anti-hallucination).
-- Output goes through the same normalisers; confidence is capped at 0.70; it **cannot override** a confident rule result.
-- API failure or garbage output degrades gracefully to the rule-based result.
+**Testing scope:** The LLM fallback is covered by automated tests using a mocked model, including simulated responses and failures where applicable. These tests do not make requests to a live AI provider. Therefore, integration with a real provider, including provider-specific errors, authentication, network behavior, and actual model responses, has not been verified by the automated test suite.
 
 ## Results (honest numbers)
 
