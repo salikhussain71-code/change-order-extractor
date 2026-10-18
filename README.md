@@ -1,105 +1,227 @@
 # Change-Order Extractor
 
-Turns messy construction **change-order documents** (text or text-based PDF) into **validated JSON** with a
-**confidence score and supporting evidence for every field**. Missing or ambiguous information is flagged for
-human review instead of being guessed.
+A Python pipeline that extracts structured information from construction change-order documents and returns validated JSON with field-level confidence scores, supporting evidence, and review warnings.
 
-Built for the Sledge AI Engineer assignment. All sample documents are synthetic.
+Built for the Sledge AI Engineer assignment. All included sample documents are synthetic.
 
-## Quick start (Windows PowerShell)
+## Key features
+
+- Extracts structured fields from text files and text-based PDFs.
+- Preserves supporting evidence for extracted values.
+- Assigns a confidence score and extraction method to each field.
+- Normalizes dates, monetary amounts, credits, and approval statuses.
+- Flags missing, ambiguous, or potentially unsafe information for review.
+- Detects PDFs without usable text and flags them for OCR instead of guessing.
+- Supports an optional LLM fallback for unresolved fields.
+- Includes automated tests, sample documents, evaluation labels, and generated JSON outputs.
+
+## Quick start
+
+Requirements: Python and pip.
+
+On Windows PowerShell:
 
 ```powershell
 git clone https://github.com/salikhussain71-code/change-order-extractor.git
 cd change-order-extractor
+
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+
 pip install -r requirements-dev.txt
-python -m pytest -q                       # 49 tests
-python -m change_order_extractor data     # process every sample, write JSON to outputs/
-python -m change_order_extractor data\co_003.txt   # one file, prints JSON
+```
+
+Run the automated test suite:
+
+```powershell
+python -m pytest -q
+```
+
+**Verified result:** 49 tests passed.
+
+Process the sample documents:
+
+```powershell
+python -m change_order_extractor data
+```
+
+The generated JSON files are written to `outputs/`.
+
+Process one document:
+
+```powershell
+python -m change_order_extractor data\co_003.txt
+```
+
+Evaluate the development dataset:
+
+```powershell
 python -m change_order_extractor.evaluate data evaluation\labels.json
+```
+
+Evaluate the held-out dataset:
+
+```powershell
 python -m change_order_extractor.evaluate data\heldout evaluation\heldout_labels.json
 ```
 
-Optional AI fallback (not required; rules work without any API key):
+## Extracted fields
 
-```powershell
-$env:GEMINI_API_KEY = "your-key"          # free tier at aistudio.google.com
-python -m change_order_extractor data --llm gemini
-# or: $env:ANTHROPIC_API_KEY = "..."; python -m change_order_extractor data --llm anthropic
-```
-
-## Output schema (my design)
-
-| field | type | notes |
+| Field | Output | Notes |
 |---|---|---|
-| `change_order_number` | string / null | as written (`014`, `CO-22`) |
-| `project_name`, `contractor`, `description` | string / null | |
-| `date` | ISO `YYYY-MM-DD` / null | ambiguous `03/04/2025` is flagged |
-| `amount` | number / null | credits are **negative** |
-| `currency` | `USD`/`PKR`/... / null | |
-| `schedule_impact_days` | integer / null | `0` = explicitly no change |
-| `approval_status` | `approved` / `pending` / `rejected` / null | |
+| `change_order_number` | String or `null` | Preserves the identifier as written |
+| `project_name` | String or `null` | Project name |
+| `contractor` | String or `null` | Contractor name |
+| `description` | String or `null` | Description of the change |
+| `date` | ISO date or `null` | Uses `YYYY-MM-DD` when unambiguous |
+| `amount` | Number or `null` | Credits are represented as negative amounts |
+| `currency` | String or `null` | For example, `USD` or `PKR` |
+| `schedule_impact_days` | Integer or `null` | Zero means an explicit no-change value |
+| `approval_status` | Enum or `null` | `approved`, `pending`, or `rejected` |
 
-Each field is an object: `value`, `confidence` (0-1), `evidence` (exact text it came from), `method` (`rule` | `llm` | `none`).
-The document also has `warnings`, `overall_confidence`, `needs_review`.
+Each field contains:
 
-Example (`data/co_003.txt`, a credit with no schedule line, trimmed):
+- `value`: extracted value or `null`
+- `confidence`: heuristic score between 0 and 1
+- `evidence`: source text supporting the extraction, when available
+- `method`: `rule`, `llm`, or `none`
+
+The document-level output also includes `source_file`, `warnings`, `overall_confidence`, and `needs_review`.
+
+## Example output
+
+A shortened example from `data/co_003.txt`:
 
 ```json
 {
   "source_file": "co_003.txt",
   "fields": {
-    "change_order_number": {"value": "031", "confidence": 0.95, "evidence": "CHANGE ORDER NUMBER: 031", "method": "rule"},
-    "amount": {"value": -3200.0, "confidence": 0.88, "evidence": "Credit Amount: ($3,200.00)", "method": "rule"},
-    "schedule_impact_days": {"value": null, "confidence": 0.0, "evidence": null, "method": "none"}
+    "change_order_number": {
+      "value": "031",
+      "confidence": 0.95,
+      "evidence": "CHANGE ORDER NUMBER: 031",
+      "method": "rule"
+    },
+    "amount": {
+      "value": -3200.0,
+      "confidence": 0.88,
+      "evidence": "Credit Amount: ($3,200.00)",
+      "method": "rule"
+    },
+    "schedule_impact_days": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "method": "none"
+    }
   },
-  "warnings": ["Amount interpreted as a credit (negative).", "Schedule impact not found."],
+  "warnings": [
+    "Amount interpreted as a credit (negative).",
+    "Schedule impact not found."
+  ],
   "overall_confidence": 0.79,
   "needs_review": false
 }
 ```
 
-More outputs are in `outputs/` (the real results of running the tool on `data/`).
+This example illustrates that a missing field can remain `null` instead of being filled with an unsupported guess. The complete generated outputs are available in `outputs/`.
 
 ## How it works
 
-1. **Read** `.txt` or PDF text layer (`pdfplumber`). A PDF with no text layer is reported as "needs OCR", not guessed.
-2. **Normalise** whitespace, dashes, odd spaces.
-3. **Extract** each field with labelled patterns tried from strict to loose (typo-tolerant labels such as `prject:` are accepted at lower confidence).
-4. **Normalise values**: money (`$(7,500.00)`, `($3,200)` -> negative), dates -> ISO, status words -> enum.
-5. **Validate**: implausible years/amounts/schedules, multiple competing amounts, ambiguous dates, injection text.
-6. **Score & flag**: field confidence -> weighted overall score -> `needs_review`.
-7. **Optional LLM fallback** for fields still missing or below 0.60 confidence (see below).
+1. **Read:** Load text files and extract the text layer from PDFs using `pdfplumber`.
+2. **Normalize:** Standardize whitespace, unusual spaces, and dash characters.
+3. **Extract:** Apply labelled patterns, from strict matches to more tolerant alternatives.
+4. **Normalize values:** Convert supported date formats, monetary amounts, credits, and status values into consistent representations.
+5. **Validate:** Check for ambiguous dates, competing amounts, implausible values, and potentially unsafe input.
+6. **Score:** Assign heuristic confidence scores based on evidence strength and validation results.
+7. **Flag for review:** Surface unresolved or ambiguous information instead of silently guessing.
+8. **Optional LLM fallback:** Attempt to resolve eligible missing or low-confidence fields when an LLM provider is configured.
 
-### Confidence scores are heuristic, not probabilities
-They encode *evidence strength* (explicit label ~0.9, typo-tolerant ~0.8, unlabelled `$` ~0.5), reduced when validation
-finds problems. They are not calibrated. `evaluate` prints mean confidence for correct vs wrong answers as a sanity check.
+## Evaluation and testing
 
-**Testing scope:** The LLM fallback is covered by automated tests using a mocked model, including simulated responses and failures where applicable. These tests do not make requests to a live AI provider. Therefore, integration with a real provider, including provider-specific errors, authentication, network behavior, and actual model responses, has not been verified by the automated test suite.
+### Automated tests
 
-## Results (honest numbers)
+The current test suite reports **49 passed**.
 
-| set | documents | field accuracy |
-|---|---|---|
-| Development set `data/` | 11 labelled (+ empty + scanned) | 88/88 (100%). Rules were tuned on this set, so it is optimistic. |
-| Held-out set `data/heldout/` | 6, written *after* the rules, differently phrased | **44/48 (92%) first run**; 47/48 (98%) after fixing two bugs it exposed (`Sept` and `$(7,500.00)`). Treat 92% as the honest estimate. |
+The suite covers extraction logic, normalization, validation, regression cases, safety-related behavior, command-line processing, and LLM fallback behavior using a mocked model.
 
-The one remaining miss is intentional to keep: a project name that appears only in a title line (`CCO 203 - Hillcrest Senior Living`).
-It is returned as `null` + a warning (a safe failure), and the LLM fallback can recover it.
-Neither set has a wrong value with confidence >= 0.9 (enforced by a test). With 17 labelled documents these numbers are
-small-sample indicators, not a benchmark.
+The tests do not make requests to a live AI provider. Real-provider authentication, network behavior, provider-specific errors, and actual model responses have not been verified by the automated test suite.
 
-## Project layout
+### Dataset results
 
+| Dataset | Evaluation result | Interpretation |
+|---|---:|---|
+| Development set, `data/` | 88/88 fields correct (100%) | Rules were tuned on this set, so the result is optimistic |
+| Held-out set, `data/heldout/` | 44/48 fields correct (92%) on the initial run | Initial evaluation before fixes |
+| Held-out set, `data/heldout/` | 47/48 fields correct (98%) after fixes | Latest verified evaluation |
+
+The latest held-out run covered six documents and 48 labelled fields. The remaining mismatch is the `project_name` field in `h_01.txt`: the expected value is `Hillcrest Senior Living`, but the rule-based extractor returns `null` because the name appears in a title line rather than a recognized field label.
+
+The extractor's conservative behavior avoids returning an unsupported project name. This case also highlights an area for future improvement.
+
+The latest evaluation reported a mean confidence of 0.89 across the 47 correctly extracted fields. There were no incorrect non-null predictions in that run. These results are small-sample indicators, not a benchmark or a guarantee of performance on unseen production documents.
+
+## Optional LLM fallback
+
+The pipeline can optionally use Gemini or Anthropic for eligible unresolved fields. The default rule-based workflow does not require an API key.
+
+Example using Gemini in PowerShell:
+
+```powershell
+$env:GEMINI_API_KEY = "your-key"
+python -m change_order_extractor data --llm gemini
 ```
-change_order_extractor/   models.py  normalize.py  extractor.py  llm.py  cli.py  evaluate.py
-data/                     13 synthetic samples (txt + 2 digital PDFs + 1 scanned PDF) and data/heldout/ (6)
-evaluation/               labels.json, heldout_labels.json, make_pdfs.py
-tests/                    49 tests (unit, regression, safety, LLM with a fake model, CLI)
-outputs/                  generated JSON for every sample
-TECHNICAL_WRITEUP.md      approach, failure modes, limitations
+
+Example using Anthropic:
+
+```powershell
+$env:ANTHROPIC_API_KEY = "your-key"
+python -m change_order_extractor data --llm anthropic
 ```
 
-## Limitations
-See `TECHNICAL_WRITEUP.md` (scanned PDFs need OCR, tables, multi-document PDFs, non-English documents, small test set).
+Use your own valid API key and keep it private. Never commit API keys to the repository.
+
+LLM fallback results depend on the configured provider and have not been validated through live-provider testing in this project.
+
+## Project structure
+
+```text
+change-order-extractor/
+├── .github/workflows/      # Automated workflow configuration
+├── change_order_extractor/ # Extraction, normalization, validation, CLI and evaluation
+├── data/                   # Synthetic sample documents and held-out samples
+├── evaluation/             # Evaluation labels and PDF-generation helper
+├── outputs/                # Generated JSON results
+├── tests/                  # Automated tests
+├── .gitignore
+├── LICENSE
+├── README.md
+├── TECHNICAL_WRITEUP.md    # Approach, failure modes and limitations
+├── pyproject.toml
+├── requirements.txt
+└── requirements-dev.txt
+```
+
+## Limitations and failure modes
+
+- **Scanned PDFs:** Documents without a usable text layer require OCR; OCR is not implemented as a complete pipeline here.
+- **Unusual layouts:** Tables, multi-column layouts, and multi-document PDFs may require specialized parsing.
+- **Project names in titles:** Names that appear only in a title line may not match the current extraction patterns.
+- **Ambiguous information:** Some dates, amounts, or field values need human review.
+- **Language coverage:** The current implementation has not been validated for non-English documents.
+- **Confidence calibration:** Confidence scores are heuristic evidence-strength indicators, not calibrated probabilities.
+- **Evaluation size:** The synthetic labelled datasets are small and do not establish production-level accuracy.
+- **Live LLM integration:** The fallback has mock-based test coverage, but real-provider behavior has not been verified.
+
+## Future improvements
+
+- Add OCR support for scanned documents.
+- Improve title-based project-name extraction.
+- Expand the synthetic and real-world evaluation sets where permitted.
+- Add broader document-layout and regression testing.
+- Test live LLM integrations safely with configured credentials.
+- Calibrate confidence scores using a larger labelled dataset.
+
+## License
+
+Released under the MIT License. See `LICENSE` for details.
